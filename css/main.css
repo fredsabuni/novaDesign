@@ -2,11 +2,11 @@
 /*------------------------------------------------------------------
 [Master Stylesheet]
 
-Project:  TATEE
+Project:  NovaDesign
 Version:	1.0
-Last change:	11/2018 [Add Define a table of contents Link]
-Assigned to:	HAU NGUYEN
-Primary use:	AuCreative
+Last change:	28/2024 [Add Define a table of contents Link]
+Assigned to:	Fredy Sabuni
+Primary use:	Abranova Inc
 -------------------------------------------------------------------*/
 /* ==========================================================================
    #BOX-SIZING
@@ -1021,6 +1021,7 @@ a:hover {
   -moz-transition: all 0.55s ease-in-out;
   transition: all 0.55s ease-in-out;
 }
+
 
 .media-about .line-bottom {
   border: none;
