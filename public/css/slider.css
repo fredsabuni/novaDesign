@@ -1,0 +1,207 @@
+.slider-container {
+    position: relative;
+    width: 100%;
+    /* height: 100vh; */
+    overflow: hidden;
+  }
+  
+  .slider-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    text-align: left; 
+    color: #fff;
+  }
+  
+  .slide-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+  }
+  
+  .slide-text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: left;
+    color: #fff;
+    padding-left: 150px;
+    z-index: 2;
+  }
+
+  .slide-text h3{ 
+    padding-bottom: 8px;
+  }
+
+  .slide-text h1{ 
+    padding-bottom: 24px;
+  }
+  
+  .view-more-button {
+    color: #fff;
+    font-family: "Poppins", Arial, "Helvetica Neue", sans-serif;
+    border: 2px solid #fff;
+    padding: 4px 16px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+  }
+  
+  .view-more-button:hover {
+    background-color: #fff;
+    color: #000;
+  }
+  
+  .slider-controls {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+  }
+  
+  .prev-button,
+  .next-button {
+    font-size: 24px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .slider-dots {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .dot:hover {
+    transform: scale(1.2);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .dot.active {
+    background-color: #c7322b;
+    transform: scale(1.3); /* Slightly larger for active dot */
+    box-shadow: 0 6px 12px rgba(199, 50, 43, 0.4); /* Accent shadow for active dot */
+  }
+
+
+/* 
+    This is the boundary that has been set into the site main page which is removed past 800px
+    Apply a red boundary with smooth transitions
+ */
+
+.header-slider-container { 
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  border: 13px solid #E03C31;
+  transition: border-width 0.5s ease, border-color 0.5s ease; 
+} 
+
+/* When the boundary is removed, fade out */
+.red-boundary {
+  border: 13px solid #E03C31; 
+}
+
+.header-slider-container:not(.red-boundary) {
+  border-width: 0;
+  border-color: transparent;
+}
+  
+/* Left sidebar styling */  
+.left-bar {
+  position: absolute;
+  left: 0;
+  top: 70px; /* Padding at the top */
+  bottom: 70px; /* Padding at the bottom */
+  width: 15px; /* Adjust width as needed */
+  background-color: #E03C31;
+  transition: opacity 0.5s ease;
+  z-index: 2;
+  border-radius: 0 0px 0px 0; /* Optional: Rounded corners on right side */
+}
+
+/* Bottom-right bar styling */
+.bottom-right-bar {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(224, 60, 49, 0.8); /* Red color with some opacity */
+  padding: 10px;
+  border-radius: 8px;
+  transition: opacity 0.5s ease;
+  z-index: 2;
+}
+
+/* Control visibility of the left bar */
+.red-boundary .left-bar, 
+.red-boundary .bottom-right-bar{
+  opacity: 1;
+}
+
+.header-slider-container:not(.red-boundary) .left-bar,
+.header-slider-container:not(.red-boundary) .bottom-right-bar {
+  opacity: 0;
+} 
+
+/* Social media icons styling */
+.header-social ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 10px;
+}
+
+.header-social ul li {
+  display: inline-block;
+}
+
+
+
+header {
+  width: 100%;
+  background-color: white; /* Set background to avoid transparency */
+  transition: all 0.3s ease; /* Smooth transition for sticky effect */
+  z-index: 1000;
+}
+
+/* Sticky header styling */
+.sticky {
+  position: fixed;
+  top: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+}
+
