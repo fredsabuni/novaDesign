@@ -10,10 +10,34 @@ import useVisibleOnScroll from "../components/animations/useVisibleOnScroll"
 
 const OurProcess = () => { 
     const ref = useVisibleOnScroll(); 
+    const [isSticky, setIsSticky] = useState(false);
+    const [showBoundary, setShowBoundary] = useState(true); 
+        useEffect(() => {
+                const handleScroll = () => {
+                    setShowBoundary(window.scrollY < 100);  
+                    setIsSticky(window.scrollY > 100); 
+                  };
+              
+                  const updateSliderHeight = () => {
+                    const headerHeight = document.querySelector('header').offsetHeight; 
+                  };
+        
+                  updateSliderHeight();
+              
+                  window.addEventListener('scroll', handleScroll);
+                  window.addEventListener('resize', updateSliderHeight); 
+              
+                  return () => {
+                    window.removeEventListener('scroll', handleScroll);
+                    window.removeEventListener('resize', updateSliderHeight);
+                  };
+            }, []);
+        
+    
      
     return(
         <main ref={ref} className='process-section'> 
-            <Header /> 
+            <Header className={isSticky ? 'sticky' : ''} /> 
             <section class="section p-t-100 p-b-65">
                 <div class="container">
                     <div class="page-heading"> 

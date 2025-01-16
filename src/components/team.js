@@ -1,9 +1,33 @@
-import React from 'react';
+import React,  { useState, useEffect } from 'react';
 import Header from './Header';
 
-const Team = () => (
-    <main>
-        <Header/>
+const Team = () => {
+    const [isSticky, setIsSticky] = useState(false);
+    const [showBoundary, setShowBoundary] = useState(true); 
+    useEffect(() => {
+                    const handleScroll = () => {
+                        setShowBoundary(window.scrollY < 100);  
+                        setIsSticky(window.scrollY > 100); 
+                      };
+                  
+                      const updateSliderHeight = () => {
+                        const headerHeight = document.querySelector('header').offsetHeight; 
+                      };
+            
+                      updateSliderHeight();
+                  
+                      window.addEventListener('scroll', handleScroll);
+                      window.addEventListener('resize', updateSliderHeight); 
+                  
+                      return () => {
+                        window.removeEventListener('scroll', handleScroll);
+                        window.removeEventListener('resize', updateSliderHeight);
+                      };
+            }, []);
+
+    return (
+        <main>
+        <Header className={isSticky ? 'sticky' : ''}/>
         <section className="p-t-120 p-b-30" style={{ marginBottom: '32px' }}>
                 <div className="container">
                     <div className="section-title m-b-70">
@@ -81,6 +105,7 @@ const Team = () => (
                 </div>
         </section>
     </main>
-);
+    ) 
+};
 
 export default Team;

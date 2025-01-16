@@ -41,24 +41,19 @@ const Home = () => {
         <Slider ref={sliderRef}/>
     </div> */} 
     <Header className={isSticky ? 'sticky' : ''}  showIcons={!showBoundary} />  
-    <div className="custom-container">  
+    <div className="custom-container p-t-50">  
         <Slider ref={sliderRef}/>
-    </div>  
+    </div>    
 
-    {/* <div className="scroll-down-animation">
-      <span className="mouse">
-          <span className="scroll-wheel"></span>
-      </span> 
-    </div> */}
-
+   {/* <Slider/> */}
+   
     <section className="p-t-10 p-b-55">
         <div className="container">
         <div className="rev-spacer"></div>
             <div className="media-about">
                 <div className="row">
                     <div className="col-lg-7">
-                        <div className="media__body">
-                            {/* <h5 className="title-sub">about us</h5> */}
+                        <div className="media__body"> 
                             <h2 className="title-1">Transforming Spaces, Empowering Communities</h2>
                             <p className="media__text">At Nova Design Group, we believe in the transformative power of design. Our philosophy revolves around the idea that good design isn't just about aesthetics; 
                                 it's about creating spaces that cater to the multifaceted needs of their occupants, owners, operators, and communities.</p>
