@@ -76,9 +76,8 @@ const Contact = () => {
           <div className="row no-gutters align-items-stretch">
             <div className="col-lg-12 contact-content m-l-15">
               <div className="page-heading">
-                <h2 className="title-1 title-sub--c8">
-                  Your Partner.
-                </h2>
+                <hr style={{ border: 'none', borderTop: '3px solid #E03C31', width: '50px', margin: '16px 0' }} />
+                <h2 className="title-1 title-sub--c8"> Your Partner. </h2>
                 <p className="m-t-30" style={{ fontSize: '1.2em' }}>
                 At Nova Design, we specialize in transforming ideas into extraordinary spaces. <br />
                 Whether you have a specific project in mind or need expert guidance to bring your vision to life, we’re here to help.

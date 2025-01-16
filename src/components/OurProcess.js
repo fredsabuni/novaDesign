@@ -42,7 +42,8 @@ const OurProcess = () => {
             <section class="section p-t-100 p-b-65">
                 <div class="container">
                     <div class="page-heading"> 
-                        <h2 class="title-2">Our Process</h2>
+                        <hr style={{ border: 'none', borderTop: '3px solid #E03C31', width: '50px', margin: '16px 0' }} />
+                        <h3 class="title-1">Our Process</h3>
                     </div>
                 </div>
             </section> 

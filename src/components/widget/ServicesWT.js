@@ -9,6 +9,7 @@ const ServicesWT = () => {
         <div class="container">
                     <div class="section-title m-b-100"> 
                         <h2 class="title-1">Our services</h2>
+                        <hr style={{ border: 'none', borderTop: '3px solid #E03C31', width: '50px', margin: '16px auto' }} />
                     </div>
                     <div class="row no-gutters">
                         <div class="col-md-6 col-lg-3">

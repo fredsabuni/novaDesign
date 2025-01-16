@@ -83,6 +83,7 @@ const Home = () => {
             <div className="section-title">
                 {/* <h5 className="title-sub">what we do</h5> */}
                 <h2 className="title-1">Our Process</h2>
+                <hr style={{ border: 'none', borderTop: '3px solid #E03C31', width: '50px', margin: '16px auto' }} />
             </div>
             <div className="row no-gutters">
                 <div className="col-md-6 col-lg-6">
@@ -144,10 +145,11 @@ const Home = () => {
             </div>
         </div>
     </section>  
+
     <OurClients />
     <NovaTeam />
     <ServicesWT />
-        </>
+    </>
     );
 }
 

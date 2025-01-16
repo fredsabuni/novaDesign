@@ -8,7 +8,8 @@ const NovaTeam = () => {
         <section className="p-t-100" >
             <div className="container p-b-40">
                 <div className="section-title"> 
-                    <h2 className="title-1 p-b-50">Who We Are</h2>
+                    <h2 className="title-1">Who We Are</h2>
+                    <hr className="p-b-50" style={{ border: 'none', borderTop: '3px solid #E03C31', width: '50px', margin: '16px auto' }} />
                     <p className="media__text">At Nova Design Group, we believe in the transformative power of design. Our philosophy revolves around the idea that good design isn't just about aesthetics; 
                                 it's about creating spaces that cater to the multifaceted needs of their occupants, owners, operators, and communities.</p>
                 </div>

@@ -28,7 +28,7 @@ const Expertise = () => {
                 window.removeEventListener('resize', updateSliderHeight);
               };
         }, []); 
-        
+
     return (
     <main>
         <Header className={isSticky ? 'sticky' : ''}/>
@@ -37,7 +37,8 @@ const Expertise = () => {
                 <div className="row">
                     <div className="col-lg-5">
                         <div className="media__body">
-                            <h2 className="title-team text-process ">Our Story</h2>
+                            <hr style={{ border: 'none', borderTop: '3px solid #E03C31', width: '50px', margin: '16px 0' }} />
+                            <h3 className="title-1 text-process p-b-50">Our Story</h3>
                             <p className="media__text">Nova Design Group was born from a simple idea: design should be about you. We believe that buildings 
                                 should serve the needs of everyone who interacts with them – the owners, the users, the community.
                                 We're a team of passionate architects and designers based in Raleigh, NC.  <br/><br/>
