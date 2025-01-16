@@ -36,8 +36,9 @@ const OurProcess = () => {
     
      
     return(
+        <>  
+        <Header className={isSticky ? 'sticky' : ''} /> 
         <main ref={ref} className='process-section'> 
-            <Header className={isSticky ? 'sticky' : ''} /> 
             <section class="section p-t-100 p-b-65">
                 <div class="container">
                     <div class="page-heading"> 
@@ -127,6 +128,7 @@ const OurProcess = () => {
             </div>
             </section>
         </main>
+        </>
     );
  
     };
