@@ -2,17 +2,17 @@ import React, { useState, forwardRef } from 'react';
 import { useSpring, animated } from 'react-spring';
 import { useInterval } from 'react-use';
 import homeImage1 from '../../assets/images/home_1.jpeg';
-import homeImage2 from '../../assets/images/home_2.jpeg'; 
+import homeImage2 from '../../assets/images/home_2.jpeg';  
 
 const slides = [
   {
     image: homeImage1,
-    title: 'Where Design <br /> Meets Innovation',
+    title: 'Redefining <br /> Spaces',
     caption: 'Nova Design',
   },
   {
     image: homeImage2,
-    title: 'Experience the <br /> Evolution',
+    title: 'Redefining <br /> Spaces',
     caption: 'Nova Design',
   },
 ];
@@ -23,7 +23,7 @@ const Slider = forwardRef((props, ref) => {
   // Interval for auto-slide
   useInterval(() => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
-  }, 5000);
+  }, 10000);
 
   // Animation for sliding
   const slideAnimation = useSpring({
@@ -38,8 +38,28 @@ const Slider = forwardRef((props, ref) => {
 
   return (
     <section className="slider-container" ref={ref}>
-      <div className="left-bar"></div> 
-      <div className="bottom-right-bar">
+      {/* <div className="left-bar"></div>  */}
+      
+      <div className="slider-wrapper">
+        <animated.div style={slideAnimation} className="slide">
+          <img src={slides[currentSlide].image} alt={slides[currentSlide].title} className="slide-image" />
+          <div className="slide-text">
+            <h1 dangerouslySetInnerHTML={{ __html: slides[currentSlide].title }} style={{ fontSize: '50px' }}></h1>
+            <a href="/our-process" className="view-more-button">
+              View More
+            </a>
+          </div>
+        </animated.div>
+        <div className="slider-dots">
+        {slides.map((_, index) => (
+          <span
+            key={index}
+            className={`dot ${index === currentSlide ? 'active' : ''}`}
+            onClick={() => setCurrentSlide(index)}
+          ></span>
+        ))}
+        </div>
+        <div className="bottom-right-bar">
         <div className="header-social">
           <ul className="list-social">
             <li className="list-social__item">
@@ -64,40 +84,9 @@ const Slider = forwardRef((props, ref) => {
             </li>
           </ul>
         </div>
-      </div>
-      <div className="slider-wrapper">
-        <animated.div style={slideAnimation} className="slide">
-          <img src={slides[currentSlide].image} alt={slides[currentSlide].title} className="slide-image" />
-          <div className="slide-text">
-            {/* <h3>{slides[currentSlide].caption}</h3> */}
-            <h1 dangerouslySetInnerHTML={{ __html: slides[currentSlide].title }} style={{ fontSize: '50px' }}></h1>
-            <a href="#" className="view-more-button">
-              View More
-            </a>
-          </div>
-        </animated.div>
-      </div>
-
-      {/* Navigation Arrows */}
-      {/* <div className="slider-controls">
-        <button onClick={handlePrev} className="prev-button">
-          &#10094;
-        </button>
-        <button onClick={handleNext} className="next-button">
-          &#10095;
-        </button>
-      </div> */}
-
-      {/* Dots for navigation */}
-      <div className="slider-dots">
-        {slides.map((_, index) => (
-          <span
-            key={index}
-            className={`dot ${index === currentSlide ? 'active' : ''}`}
-            onClick={() => setCurrentSlide(index)}
-          ></span>
-        ))}
-      </div>
+      </div> 
+      </div> 
+      
     </section>
   );
 });

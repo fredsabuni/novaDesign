@@ -41,7 +41,8 @@ img {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Poppins", Arial, "Helvetica Neue", sans-serif;
+  /* font-family: "Poppins", Arial, "Helvetica Neue", sans-serif; */
+  font-family: "Roboto","Helvetica Neue"; 
   font-weight: 700;
   text-transform: none;
   line-height: 1.2;
@@ -315,6 +316,7 @@ button {
   -moz-border-radius: 0;
   border-radius: 0;
 }
+ 
 
 .au-btn .ic-arrow,
 .swal-button .ic-arrow {
@@ -326,14 +328,14 @@ button {
 }
 
 .au-btn:hover,
-.swal-button:hover {
+.swal-button:hover{
   color: #fff;
   background: #222;
   border-color: transparent;
 }
 
 .au-btn:hover .ic-arrow,
-.swal-button:hover .ic-arrow {
+.swal-button:hover .ic-arrow{
   color: #fff;
   -webkit-transform: translateX(5px);
   -moz-transform: translateX(5px);
@@ -343,12 +345,12 @@ button {
 }
 
 .au-btn--solid,
-.swal-button {
+.swal-button{
   background: #222;
   color: #fff;
   border: none;
   line-height: 45px;
-}
+} 
 
 .au-btn--solid:hover,
 .swal-button:hover {
@@ -493,7 +495,8 @@ button {
 html, body {
   background: #fff;
   color: #555;
-  font-family: "Poppins", Arial, "Helvetica Neue", sans-serif;
+  /* font-family: "Poppins", Arial, "Helvetica Neue", sans-serif; */
+  font-family: "Roboto", "Helvetica Neue"; 
   font-size: 13px;
   line-height: 2.3076923077;
   font-weight: 400;
@@ -5349,7 +5352,8 @@ button {
   background: #fff;
 }
 
-.hamburger {
+
+.hamburger-nova {
   border: 1px solid #888;
   display: -webkit-box;
   display: -webkit-flex;
@@ -5373,9 +5377,10 @@ button {
   -o-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  border-radius: 50%; /* Ensures the border forms a perfect circle */
 }
 
-.hamburger:hover {
+.hamburger-nova:hover {
   background: #111;
   border-color: transparent;
 }

@@ -1,18 +1,18 @@
 .slider-container {
     position: relative;
-    width: 100%;
-    /* height: 100vh; */
+    /* width: 100%;
+    height: 80%; */
     overflow: hidden;
   }
   
   .slider-wrapper {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+  } 
   
   .slide {
     position: absolute;
@@ -42,12 +42,24 @@
     z-index: 2;
   }
 
+  @media (max-width: 768px) {
+    .slide-text {
+      padding-left: 50px;
+    }
+  }
+
   .slide-text h3{ 
     padding-bottom: 8px;
   }
 
   .slide-text h1{ 
     padding-bottom: 24px;
+  }
+
+  @media (max-width: 768px) {
+    .slide-text h1 {
+      padding-bottom: 16px;
+    }
   }
   
   .view-more-button {
@@ -132,7 +144,7 @@
 
 /* When the boundary is removed, fade out */
 .red-boundary {
-  border: 13px solid #E03C31; 
+  border: 0px solid #E03C31; 
 }
 
 .header-slider-container:not(.red-boundary) {
@@ -158,11 +170,16 @@
   position: absolute;
   bottom: 20px;
   right: 20px;
-  background-color: rgba(224, 60, 49, 0.8); /* Red color with some opacity */
+  background-color: rgba(224, 60, 49, 0.8);  
   padding: 10px;
   border-radius: 8px;
   transition: opacity 0.5s ease;
   z-index: 2;
+  display: block;
+} @media (max-width: 768px) {
+  .bottom-right-bar {
+    display: none;  
+  }
 }
 
 /* Control visibility of the left bar */
@@ -205,3 +222,386 @@ header {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
 }
 
+.bottom-right-bar .ic-linkedin i {
+  color: #ffffff; /* LinkedIn blue */
+}
+
+.bottom-right-bar .ic-linkedin i:hover {
+  color: #ffffff; /* Darker shade on hover (optional) */
+}
+
+.bottom-right-bar .ic-linkedin i {
+  color: #ffffff; /* LinkedIn blue */
+}
+
+.bottom-right-bar .ic-linkedin i:hover {
+  color: #ffffff; /* Darker shade on hover (optional) */
+}
+
+.bottom-right-bar .ic-fb i {
+  color: #ffffff; /* LinkedIn blue */
+}
+
+.bottom-right-bar .ic-fb i:hover {
+  color: #ffffff; /* Darker shade on hover (optional) */
+}
+
+.bottom-right-bar .ic-youtube i {
+  color: #ffffff; /* LinkedIn blue */
+}
+
+.bottom-right-bar .ic-youtube i:hover {
+  color: #ffffff; /* Darker shade on hover (optional) */
+}
+
+.bottom-right-bar .ic-twi i {
+  color: #ffffff; /* LinkedIn blue */
+}
+
+.bottom-right-bar .ic-twi i:hover {
+  color: #ffffff; /* Darker shade on hover (optional) */
+}
+
+/* CONTACT CSS */
+
+.contact-section {
+  padding: 0px 0; /* Top and bottom padding */
+  min-height: 100vh; /* Full viewport height */
+  margin: 0; /* Removes default margin */
+  width: 100vw; /* Ensures the section spans the full viewport width */
+}
+
+.contact-section .container {
+  max-width: 100%; /* Removes default container width */
+  padding: 0; /* Removes left and right padding */
+}
+
+.contact-section .row {
+  margin: 0; /* Removes row margins */
+} 
+
+.contact-image {
+  display: flex;
+  align-items: flex-end; /* Aligns the image to the top */
+  justify-content: center; /* Centers the image horizontally */ ;
+}
+
+.contact-image img { 
+  width: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensures the image fills without distortion */
+}
+
+.contact-content {
+  padding: 20px; /* Adds padding inside the right column */
+  margin-left: 0px; /* Adds space between the image and the right column */
+  flex: 1; /* Ensures the right column takes the remaining space */  
+}
+
+.contact-info {
+  margin-bottom: 20px; /* Adds spacing below the contact info */
+}
+
+.page-heading h2 {
+  margin-top: 10px; /* Adds some space between the title and subtitle */
+}
+
+
+/* CONTACT CSS */
+
+/* PROCESS CSS */
+
+.text-process {
+  color: #E03C31;
+}
+
+.title-team {
+  font-weight: 700;
+  font-size: 38px; 
+  line-height: -webkit-calc(50/38);
+  line-height: -moz-calc(50/38);
+  line-height: calc(50/38);
+}
+
+.title-container {
+  margin: 20px; /* Adjust the margin as needed */
+  padding: 10px 20px; /* Horizontal and vertical padding */
+  background-color: #f0f0f0; /* Light gray background for visibility */
+  border-radius: 50px; /* Rounded corners with a radius of 10px */ 
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-container h1 {
+  font-size: 24px; /* Large font size for the title */
+  color: #E03C31; /* Dark gray color for text */
+  font-weight: bold; /* Bold font weight */
+  margin: 0; /* Remove default margin */
+}
+
+.process-section {
+  transition: opacity 0.6s ease-out, transform 0.6s cubic-bezier(0.33, 1, 0.68, 1);
+  opacity: 0;
+  transform: translateY(50px);  /* Start lower */
+  visibility: hidden;
+}
+
+.process-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;  /* Ensure visibility is turned on when in view */
+}
+
+
+
+/* PROCESS CSS */
+
+/* OUR EXPERTISE */
+ 
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* subtle shadow for depth */
+  border: 1px;  /* remove default borders */
+  border-color: #E03C31;
+  margin-top: 20px;  /* spacing between rows */
+}
+
+.card-body {
+  padding: 20px;  /* padding inside each card */
+}
+
+.card-title {
+  font-size: 20px;  /* title size as per design */
+  color: #333;  /* dark text color for better readability */
+  margin-bottom: 15px;  /* space between title and text */
+}
+
+.card-text {
+  font-size: 16px;  /* smaller text for the body */
+  color: #666;  /* lighter text color */
+  margin-bottom: 20px;  /* space above the button */
+}
+
+.btn-primary {
+  background-color: #E03C31;  /* branding color for buttons */
+  border-color: #E03C31;  /* consistent border color */
+  color: white;  /* text color for readability */
+}
+
+.btn-primary:hover {
+  background-color: #E03C31;  /* darker shade on hover for interaction feedback */
+  border-color: #E03C31;
+}
+
+
+
+
+/* NovaTeam */
+.center-flex {
+  display: flex;
+  justify-content: center; /* Horizontally center the contents */
+  align-items: center; /* Vertically center the contents (if needed) */
+}
+/* NovaTeam */
+
+/* ==========================================================================
+   #BUTTON
+   ========================================================================== */
+   .nova-btn{
+     display: inline-block;
+     line-height: 43px;
+     border: 1px solid #E03C31;
+     padding: 0 23px;
+     font-size: 13px;
+     color: #fff;
+     -webkit-transition: all 0.3s ease;
+     -o-transition: all 0.3s ease;
+     -moz-transition: all 0.3s ease;
+     transition: all 0.3s ease;
+     -webkit-border-radius: 0;
+     background-color: #E03C31;
+     -moz-border-radius: 0;
+     border-radius: 0;
+   }
+    
+   
+   .nova-btn .ic-arrow{
+     margin-left: 7px;
+     -webkit-transition: inherit;
+     -o-transition: inherit;
+     -moz-transition: inherit;
+     transition: inherit;
+   }
+   
+   .nova-btn:hover{
+     color: #fff;
+     background: #E03C31;
+     border-color: transparent;
+   }
+   
+   .nova-btn:hover .ic-arrow {
+     color: #fff;
+     -webkit-transform: translateX(5px);
+     -moz-transform: translateX(5px);
+     -ms-transform: translateX(5px);
+     -o-transform: translateX(5px);
+     transform: translateX(5px);
+   }
+   
+   .nova-btn--solid {
+     background: #E03C31;
+     color: #fff;
+     border: none;
+     line-height: 45px;
+   } 
+   
+   .nova-btn-solid:hover{
+     background: #666;
+   } 
+
+
+   /* =============================== nova-black-btn =============================== */
+
+   .nova-black-btn{
+    display: inline-block;
+    line-height: 43px;
+    border: 1px solid #000000;
+    padding: 0 23px;
+    font-size: 13px;
+    color: #fff;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    -webkit-border-radius: 0;
+    background-color: #000000;
+    -moz-border-radius: 0;
+    border-radius: 0;
+  }
+   
+  
+  .nova-black-btn .ic-arrow{
+    margin-left: 7px;
+    -webkit-transition: inherit;
+    -o-transition: inherit;
+    -moz-transition: inherit;
+    transition: inherit;
+  }
+  
+  .nova-black-btn:hover{
+    color: #fff;
+    background: #000000;
+    border-color: transparent;
+  }
+  
+  .nova-black-btn:hover .ic-arrow {
+    color: #fff;
+    -webkit-transform: translateX(5px);
+    -moz-transform: translateX(5px);
+    -ms-transform: translateX(5px);
+    -o-transform: translateX(5px);
+    transform: translateX(5px);
+  }
+  
+  .nova-black-btn--solid {
+    background: #000000;
+    color: #fff;
+    border: none;
+    line-height: 45px;
+  } 
+  
+  .nova-black-btn-solid:hover{
+    background: #666;
+  } 
+
+
+   /* SERVICE CHECKLIST */
+
+.checklist {
+    list-style: none;  
+    margin: 0;  
+    padding: 0;  
+}
+
+.checklist li {
+    position: relative;
+    padding-left: 20px;  
+    margin-bottom: 5px;  
+    text-align: left;  
+}
+
+.checklist li::before {
+    content: '\2713'; 
+    position: absolute;
+    left: 0;  
+    color: #E03C31; 
+    font-size: 16px;  
+}
+
+   /* SERVICE CHECKLIST */
+   .custom-container {
+    max-width: 1200px; 
+    margin: 0 auto;  
+    padding: 0 20px;  
+    box-sizing: border-box;  
+  }
+
+  .scroll-down-animation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px; /* Space below the custom-container */
+    animation: fadeIn 2s ease-in-out; /* Fade-in effect */
+  }
+  
+  .mouse {
+    width: 30px;
+    height: 50px;
+    border: 2px solid #E03C31; /* Black border for the mouse outline */
+    border-radius: 20px; /* Rounded shape for the mouse */
+    position: relative;
+  }
+  
+  .scroll-wheel {
+    width: 6px;
+    height: 10px;
+    background-color: #E03C31; /* Black scroll wheel */
+    border-radius: 3px;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scroll 1.5s infinite; /* Scrolling effect */
+  }
+  
+  @keyframes scroll {
+    0% {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+    50% {
+      opacity: 0.5;
+      transform: translate(-50%, 10px);
+    }
+    100% {
+      opacity: 0;
+      transform: translate(-50%, 20px);
+    }
+  }
+  
+  .scroll-down-animation p {
+    font-size: 14px;
+    color: #000; /* Black text */
+    margin-top: 10px;
+    animation: fadeIn 2s ease-in-out; /* Text fades in with the mouse */
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  

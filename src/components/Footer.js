@@ -18,9 +18,9 @@ const Footer = () => {
                             </div>
                             <div className="widget widget-address align-left">
                                 <ul>
-                                    <li>Address : 16 West Martin Street Raleigh, Suite 301 Raleigh, NC 27601 </li>
-                                    <li>Phone number : + (919) 500-0186</li>
-                                    <li>Email : admin@novadesign.ai</li>
+                                    <li>16 West Martin Street Raleigh, Suite 301 Raleigh, NC 27601 </li>
+                                    <li>+ (919) 500-0186</li>
+                                    <li>admin@novadesign.ai</li>
                                 </ul>
                             </div>
                         </div>
@@ -32,10 +32,7 @@ const Footer = () => {
                                 <ul>
                                     <li>
                                         <a href="#">Our Experience</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Our Approach</a>
-                                    </li>
+                                    </li> 
                                     <li>
                                         <a href="#">Our Process</a>
                                     </li>

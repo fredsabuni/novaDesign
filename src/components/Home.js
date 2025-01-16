@@ -1,6 +1,9 @@
 import React, {useState, useEffect, useRef} from "react";  
 import Slider from "./widget/slider";
 import Header from './Header'; 
+import OurClients from "./widget/OurClients";
+import NovaTeam from "./widget/NovaTeam";
+import ServicesWT from "./widget/ServicesWT"; 
 
 
 const Home = () => {
@@ -32,11 +35,22 @@ const Home = () => {
     }, []);
      
     return (
-        <>  
-    <div className={`header-slider-container ${showBoundary ? 'red-boundary' : ''}`}>
+    <>  
+    {/* <div className={`header-slider-container ${showBoundary && window.innerWidth > 768 ? 'red-boundary' : ''}`}>
         <Header className={isSticky ? 'sticky' : ''}  showIcons={!showBoundary} />
         <Slider ref={sliderRef}/>
-    </div>
+    </div> */} 
+    <Header className={isSticky ? 'sticky' : ''}  showIcons={!showBoundary} />  
+    <div className="custom-container">  
+        <Slider ref={sliderRef}/>
+    </div>  
+
+    {/* <div className="scroll-down-animation">
+      <span className="mouse">
+          <span className="scroll-wheel"></span>
+      </span> 
+    </div> */}
+
     <section className="p-t-10 p-b-55">
         <div className="container">
         <div className="rev-spacer"></div>
@@ -48,7 +62,7 @@ const Home = () => {
                             <h2 className="title-1">Transforming Spaces, Empowering Communities</h2>
                             <p className="media__text">At Nova Design Group, we believe in the transformative power of design. Our philosophy revolves around the idea that good design isn't just about aesthetics; 
                                 it's about creating spaces that cater to the multifaceted needs of their occupants, owners, operators, and communities.</p>
-                            <a className="au-btn au-btn--arrow" href="./novaAbout.html">Read more
+                            <a className="au-btn au-btn--arrow" href="/expertise">Read more
                                 <i className="zmdi zmdi-arrow-right ic-arrow"></i>
                             </a>
                         </div>
@@ -72,14 +86,14 @@ const Home = () => {
     <section className="p-t-60 p-b-55">
         <div className="container">
             <div className="section-title">
-                <h5 className="title-sub">what we do</h5>
-                <h2 className="title-1">Our Approach</h2>
+                {/* <h5 className="title-sub">what we do</h5> */}
+                <h2 className="title-1">Our Process</h2>
             </div>
             <div className="row no-gutters">
                 <div className="col-md-6 col-lg-6">
                     <article className="media media-service">
                         <figure className="media__img">
-                        <img src="images/icon/nova_Strategy.png" style={{ maxWidth: '50%' }} alt="architecture" />
+                        <img src="images/icon/icon_1.png" style={{ maxWidth: '50%' }} alt="architecture" />
                         </figure>
                         <div className="media__title">
                             <h3 className="title">
@@ -93,7 +107,7 @@ const Home = () => {
                 <div className="col-md-6 col-lg-6">
                     <article className="media media-service">
                         <figure className="media__img">
-                        <img src="images/icon/nova_Design.png" style={{ maxWidth: '50%' }} alt="Interior" />
+                        <img src="images/icon/icon_2.png" style={{ maxWidth: '50%' }} alt="Interior" />
                         </figure>
                         <div className="media__title">
                             <h3 className="title">
@@ -107,7 +121,7 @@ const Home = () => {
                 <div className="col-md-6 col-lg-6">
                     <article className="media media-service">
                         <figure className="media__img">
-                        <img src="images/icon/nova_Implementation.png" style={{ maxWidth: '50%' }} alt="planning" />
+                        <img src="images/icon/icon_3.png" style={{ maxWidth: '50%' }} alt="planning" />
                         </figure>
                         <div className="media__title">
                             <h3 className="title">
@@ -121,7 +135,7 @@ const Home = () => {
                 <div className="col-md-6 col-lg-6">
                     <article className="media media-service">
                         <figure className="media__img">
-                        <img src="images/icon/nova_Review.png" style={{ maxWidth: '50%' }} alt="planning" />
+                        <img src="images/icon/icon_4.png" style={{ maxWidth: '50%' }} alt="planning" />
                         </figure>
                         <div className="media__title">
                             <h3 className="title">
@@ -135,6 +149,9 @@ const Home = () => {
             </div>
         </div>
     </section>  
+    <OurClients />
+    <NovaTeam />
+    <ServicesWT />
         </>
     );
 }

@@ -28,16 +28,16 @@ const Header = ({ className , showIcons }) => {
                                                 <Link to="/" style={getLinkStyle('/')}>Home</Link> 
                                             </li>
                                             <li className="menu-item">
-                                                <Link to="/about" style={getLinkStyle('/about')}>Our Expertise</Link>
+                                                <Link to="/expertise" style={getLinkStyle('/expertise')}>Our Expertise</Link>
+                                            </li> 
+                                            {/* <li className="menu-item">
+                                                <Link to="/approach" style={getLinkStyle('/approach')}>Our Approach</Link>
+                                            </li>  */}
+                                            <li className="menu-item">
+                                                <Link to="/our-process" style={getLinkStyle('/our-process')}>Our Process</Link>
                                             </li> 
                                             <li className="menu-item">
-                                                <Link to="/our-approach" style={getLinkStyle('/our-approach')}>Our Approach</Link>
-                                            </li> 
-                                            <li className="menu-item">
-                                                <Link to="/our-approach" style={getLinkStyle('/our-approach')}>Our Process</Link>
-                                            </li> 
-                                            <li className="menu-item">
-                                                <Link to="/our-approach" style={getLinkStyle('/our-approach')}>Team</Link>
+                                                <Link to="/team" style={getLinkStyle('/team')}>Team</Link>
                                             </li> 
                                             <li className="menu-item">
                                                 <Link to="/contact" style={getLinkStyle('/contact')}>Contact</Link>
@@ -80,28 +80,34 @@ const Header = ({ className , showIcons }) => {
                     <div className="container-fluid">
                         <div className="header-mobile__bar-inner">
                             <Link className="logo" to="/">
-                                <img src="images/icon/logo-white.png" alt="NovaDesign" />
+                                <img src="images/icon/logo-white.png" style={{ maxWidth: '50%' }} alt="NovaDesign" />
                             </Link>
-                            <button className="hamburger hamburger--slider float-right" type="button">
+                            <button className="hamburger-nova hamburger--slider float-right" type="button" data-toggle="collapse" data-target="#mobile-menu">
                                 <span className="hamburger-box">
                                     <span className="hamburger-inner"></span>
                                 </span>
-                            </button>
-                        </div>
+                            </button> 
+                       </div>
                     </div>
                 </div>
-                <nav className="header-nav-menu-mobile">
+                <nav className="header-nav-menu-mobile collapse" id="mobile-menu">
                     <div className="container-fluid">
                         <ul className="menu nav-menu menu-mobile">
                             <li className="menu-item">
                                 <Link to="/" style={getLinkStyle('/')}>Home</Link>
                             </li>
                             <li className="menu-item">
-                                <Link to="/about" style={getLinkStyle('/about')}>About</Link>
-                            </li>
+                                <Link to="/expertise" style={getLinkStyle('/expertise')}>Our Expertise</Link>
+                            </li> 
+                            {/* <li className="menu-item">
+                                <Link to="/approach" style={getLinkStyle('/approach')}>Our Approach</Link>
+                            </li> */}
                             <li className="menu-item">
-                                <Link to="/our-approach" style={getLinkStyle('/our-approach')}>Our Approach</Link>
-                            </li>
+                                <Link to="/our-process" style={getLinkStyle('/our-process')}>Our Process</Link>
+                            </li>  
+                            <li className="menu-item">
+                                <Link to="/team" style={getLinkStyle('/team')}>Team</Link>
+                            </li> 
                             <li className="menu-item">
                                 <Link to="/contact" style={getLinkStyle('/contact')}>Contact</Link>
                             </li>
