@@ -1,9 +1,9 @@
 import React,  { useState, useEffect } from 'react';
 import Header from './Header'; 
-import strategy from "../assets/images/process/1.png"; 
-import design from "../assets/images/process/2.png"; 
-import implementation from "../assets/images/process/3.png"; 
-import review from "../assets/images/process/4.png";  
+import strategy from "../assets/images/process/sketch_01.png"; 
+import design from "../assets/images/process/line_art.png"; 
+import implementation from "../assets/images/process/black_and_white.png"; 
+import review from "../assets/images/process/colour.png";  
 import useVisibleOnScroll from "../components/animations/useVisibleOnScroll"
 
 

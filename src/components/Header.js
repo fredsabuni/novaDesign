@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 const Header = ({ className , showIcons }) => {
-    const location = useLocation();
+    const location = useLocation();  
 
     // Function to check if a link is active based on current path
     const getLinkStyle = (path) => {
@@ -86,7 +86,8 @@ const Header = ({ className , showIcons }) => {
                                 <span className="hamburger-box">
                                     <span className="hamburger-inner"></span>
                                 </span>
-                            </button> 
+                            </button>   
+
                        </div>
                     </div>
                 </div>
